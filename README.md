@@ -32,6 +32,10 @@ server {
     }
 }
 ```
+Add port 9900 into segange port
+```
+sudo semanage port -a -t http_port_t  -p tcp 9900
+```
 ### bash setup
 Clone bash script
 ```
