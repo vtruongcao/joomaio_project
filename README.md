@@ -28,6 +28,8 @@ server {
     ...
     location ~ \.php$ {
         fastcgi_pass unix:/run/php-fpm/www.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
         ...
     }
 }
@@ -48,7 +50,7 @@ Or download zip bash script from https://github.com/joomaio/starter/tree/bash_sc
 
 ## Run bash script
 ```
-sudo bash setup.sh -user user-name -fpm fpm-container-name -web_root_path web_path -document_root document_root_path
+sudo bash setup.sh -user user-name -document_root document_root_path
 ```
 with\
 user-name: permission for starter work, ex: www-data\
