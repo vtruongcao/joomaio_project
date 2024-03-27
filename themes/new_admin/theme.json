@@ -1,0 +1,7 @@
+{
+    "title": "New Theme for Administrator",
+    "folder" : "new_admin",
+    "description" : "This is new theme",
+    "image": "assets/new_admin/images/logo.svg",
+    "dependencies" : []
+}
